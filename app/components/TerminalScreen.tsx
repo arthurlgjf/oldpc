@@ -21,7 +21,7 @@ export default function TerminalScreen() {
       <Script src="/js/42879de7b8087bc9.js" strategy="afterInteractive" />
       <Script src="/js/60a4f84f215dd110.js" strategy="afterInteractive" />
       <Script src="/js/fd5f064b2a3f9309.js" id="_R_" strategy="afterInteractive" />
-      <Script src="/js/a6dad97d9634a72d.js" nomodule strategy="afterInteractive" />
+      <Script src="/js/a6dad97d9634a72d.js" noModule strategy="afterInteractive" />
       
       {/* The terminal component should render here via the scripts */}
       <div id="__terminal_mount__"></div>
