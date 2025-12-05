@@ -65,7 +65,7 @@ export default function Home() {
                     <div className="w-4 h-4 bg-cyan-500 rounded-full opacity-90 shadow-[0_0_8px_rgba(6,182,212,0.8)]"></div>
                   </div>
                   <div className="flex flex-col">
-                    <span className="font-sans text-neutral-600 font-bold tracking-[0.2em] text-xs uppercase drop-shadow-[0_1px_0_rgba(255,255,255,0.4)]">Neural</span>
+                    <span className="font-sans text-neutral-600 font-bold tracking-[0.2em] text-xs uppercase drop-shadow-[0_1px_0_rgba(255,255,255,0.4)]">ARTHUR</span>
                     <span className="font-sans text-neutral-500 font-bold tracking-[0.1em] text-[0.6rem] uppercase drop-shadow-[0_1px_0_rgba(255,255,255,0.4)]">Systems Inc.</span>
                   </div>
                 </div>

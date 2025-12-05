@@ -20,7 +20,7 @@ const bootMessages = [
   "Starting init process...",
   "Loading shell...",
   "  ",
-  "Welcome to NeuralOS v1.0 (tty1)",
+  "Welcome to ARTHUROS v1.0 (tty1)",
   "Type 'help' for a list of commands.",
   "  "
 ]
@@ -36,7 +36,7 @@ export default function RetroTerminal({ isPowered, onPowerChange }: RetroTermina
   const [history, setHistory] = useState<Array<{type: string, content: string, path?: string}>>([])
   const [input, setInput] = useState("")
   const [isProcessing, setIsProcessing] = useState(false)
-  const [currentPath, setCurrentPath] = useState("/home/guest")
+  const [currentPath, setCurrentPath] = useState("/home/admin")
   const [soundEnabled, setSoundEnabled] = useState(true)
   const [isEditing, setIsEditing] = useState(false)
   const [editingFile, setEditingFile] = useState<string | null>(null)
@@ -132,7 +132,7 @@ export default function RetroTerminal({ isPowered, onPowerChange }: RetroTermina
 
   const themes: Record<string, any> = {
     neural: {
-      name: "NeuralOS",
+      name: "ARTHUROS",
       screenBg: "bg-linear-to-b from-[#0F4B8F] to-[#042852]",
       screenBorder: "border-[#0A3560]",
       textMain: "text-cyan-300",
@@ -349,7 +349,7 @@ export default function RetroTerminal({ isPowered, onPowerChange }: RetroTermina
         output = currentPath
         break
       case "whoami":
-        output = "guest"
+        output = "admin"
         break
       case "date":
         output = new Date().toString()
@@ -468,7 +468,7 @@ export default function RetroTerminal({ isPowered, onPowerChange }: RetroTermina
                     <div key={i} className={`mb-1 whitespace-pre-wrap break-words ${item.type === "output" ? `${currentTheme.textMain} opacity-90` : currentTheme.textHighlight}`}>
                       {item.type === "input" && (
                         <span className={`mr-2 ${currentTheme.textMain} select-none font-normal`}>
-                          guest@neural:{(item.path || currentPath) === "/home/guest" ? "~" : item.path || currentPath}$
+                          admin@arthur:{(item.path || currentPath) === "/home/admin" ? "~" : item.path || currentPath}$
                         </span>
                       )}
                       {item.content}
@@ -476,7 +476,7 @@ export default function RetroTerminal({ isPowered, onPowerChange }: RetroTermina
                   ))}
                   <div className="flex items-center relative">
                     <span className={`mr-2 ${currentTheme.textMain} shrink-0 select-none`}>
-                      guest@neural:{currentPath === "/home/guest" ? "~" : currentPath}$
+                      admin@arthur:{currentPath === "/home/admin" ? "~" : currentPath}$
                     </span>
                     <div className="relative flex-1 flex items-center flex-wrap">
                       <span className={`whitespace-pre-wrap break-all ${currentTheme.textMain}`}>
